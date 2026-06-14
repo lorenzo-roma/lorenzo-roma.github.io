@@ -334,6 +334,28 @@
     .lightbox-prev { left: 24px; }
     .lightbox-next { right: 80px; }
 
+    /* ABOUT SECTION */
+    .about {
+      padding: 80px 40px 72px;
+      max-width: 620px;
+    }
+
+    .about-label {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .about-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #c8c3bc;
+    }
+
     /* Page load fade */
     body {
       animation: pagefade 0.8s ease both;
@@ -351,6 +373,7 @@
     <div class="nav-name">Lorenzo</div>
     <div class="nav-links">
       <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#" onclick="openContact(); return false;">Contact</a>
     </div>
   </nav>
@@ -397,6 +420,11 @@
     </div>
   </main>
 
+  <section class="about" id="about">
+    <div class="about-label">About</div>
+    <p class="about-text">Lorenzo Roma is a director and screenwriter from Rome, based in London. With a background in philosophy, his films are shaped by a broad range of artistic influences and a particular interest in magical realism.</p>
+  </section>
+
   <footer>
     <div class="footer-name">Lorenzo — Director &amp; Screenwriter</div>
     <a class="footer-contact" href="mailto:loreroma265@gmail.com">loreroma265@gmail.com</a>
@@ -423,21 +451,25 @@
       {
         title: "L'Autografo",
         desc: "Italy · 2025 · 8 min",
+        logline: "A young man tracks down a reclusive literary giant in a Tuscan village, claiming to be a fan.",
         img: "lautografo.png"
       },
       {
         title: "How was the gig?",
         desc: "",
+        logline: "A student tries to get closer to a girl he met the summer before, navigating friends, a girlfriend, and his own indecision against the backdrop of a night out.",
         img: "how was the gig?.png"
       },
       {
         title: "Suzanne",
         desc: "",
+        logline: "A student stuck in an existential rut encounters a mysterious girl who seems to embody the Leonard Cohen song he can't stop playing.",
         img: "suzanne.png"
       },
       {
         title: "Dostoevskyi on the Bridge",
         desc: "",
+        logline: "A homeless man who believes he is Dostoevsky is locked up by a university lecturer and forced to write a novel at gunpoint.",
         img: "on the bridge.png"
       }
     ];
@@ -464,7 +496,7 @@
     function render() {
       const f = films[current];
       document.getElementById('lightbox-title').textContent = f.title;
-      document.getElementById('lightbox-desc').textContent = f.desc;
+      document.getElementById('lightbox-desc').textContent = [f.desc, f.logline].filter(Boolean).join(' — ');
 
       const wrap = document.getElementById('lightbox-img-wrap');
       if (f.img) {
