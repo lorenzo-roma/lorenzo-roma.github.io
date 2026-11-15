@@ -334,28 +334,6 @@
     .lightbox-prev { left: 24px; }
     .lightbox-next { right: 80px; }
 
-    /* ABOUT SECTION */
-    .about {
-      padding: 80px 40px 72px;
-      max-width: 620px;
-    }
-
-    .about-label {
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .about-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 1.7;
-      color: #c8c3bc;
-    }
-
     /* Page load fade */
     body {
       animation: pagefade 0.8s ease both;
@@ -373,7 +351,6 @@
     <div class="nav-name">Lorenzo</div>
     <div class="nav-links">
       <a href="#work">Work</a>
-      <a href="#about">About</a>
       <a href="#" onclick="openContact(); return false;">Contact</a>
     </div>
   </nav>
@@ -408,12 +385,12 @@
         </div>
       </div>
 
-      <!-- SMALL: Dostoevskyi on the Bridge -->
+      <!-- SMALL: On the Bridge -->
       <div class="tile tile-small" onclick="openLightbox(3)">
-        <img class="tile-img" src="on the bridge.png" alt="Dostoevskyi on the Bridge" />
+        <img class="tile-img" src="on the bridge.png" alt="On the Bridge" />
         <span class="tile-number">04</span>
         <div class="tile-label">
-          <div class="tile-title">Dostoevskyi on the Bridge</div>
+          <div class="tile-title">On the Bridge</div>
         </div>
       </div>
 
@@ -428,11 +405,6 @@
 
     </div>
   </main>
-
-  <section class="about" id="about">
-    <div class="about-label">About</div>
-    <p class="about-text">Lorenzo Roma is a director and screenwriter from Rome, based in Oxford. With a background in philosophy, his films are shaped by an interest in moral dramas and magical realism.</p>
-  </section>
 
   <footer>
     <div class="footer-name">Lorenzo — Director &amp; Screenwriter</div>
@@ -476,7 +448,7 @@
         img: "suzanne.png"
       },
       {
-        title: "Dostoevskyi on the Bridge",
+        title: "On the Bridge",
         desc: "",
         logline: "A homeless man who believes he is Dostoevsky is locked up by a university lecturer and forced to write a novel at gunpoint.",
         img: "on the bridge.png"
